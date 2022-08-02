@@ -673,28 +673,95 @@ img{
     margin: 20px;
     text-align: center;
 }
-.about-section .about-img .social-links a{
+.about-section .about-img .social-links #facebook {
     display: inline-block;
     height: 40px;
     width: 40px;
     border-radius: 12px;
     font-size: 16px;
     text-align: center;
-    color: var(--text-black-700);
+    color: white;
     margin: 0 4px;
     transition: all 0.3s ease;
     margin-bottom: 15px;
-    background-color: var(--skin-color);
+    background-color:#4267B2;
+}
+.about-section .about-img .social-links #github {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 12px;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    margin: 0 4px;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+    background-color:#171515;
+}
+.about-section .about-img .social-links #twitter {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 12px;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    margin: 0 4px;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+    background-color:#1DA1F2;
+}
+.about-section .about-img .social-links #instagram {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 12px;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    margin: 0 4px;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
 
 }
-
+.about-section .about-img .social-links #linkedin {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 12px;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    margin: 0 4px;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+    background-color:#0072b1;
+}
 .about-section .about-img .social-links a i{
     line-height: 40px;
 }
 
-.about-section .about-img .social-links a:hover{
+.about-section .about-img .social-links #github:hover{
     color: var(--skin-color);
     background-color: transparent;
+}
+.about-section .about-img .social-links #linkedin:hover{
+    color: var(--skin-color);
+    background-color: transparent;
+}
+.about-section .about-img .social-links #facebook:hover{
+    color: var(--skin-color);
+    background-color: transparent;
+}
+.about-section .about-img .social-links #twitter:hover{
+    color: var(--skin-color);
+    background-color: transparent;
+}
+.about-section .about-img .social-links #instagram:hover{
+    color: var(--skin-color);
+    background-image: none;
 }
 .about-section .about-img .social-links .hover-in-shadow::after{
     border-radius: 14px;
@@ -921,50 +988,27 @@ img{
 }
 /* last  */
 
-/***** service-section *****/
+/* 
+----------service section----------------
+*/
 
 .service-section{
-    padding: 80px 0px 80px;
+    padding: 80px 0 80px;
     min-height: 100vh;
 }
-
 .service-section .service-item{
     flex: 0 0 33.33%;
     max-width: 33.33%;
     padding: 15px;
     display: flex;
     flex-wrap: wrap;
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
 }
-
 .service-section .service-item-inner{
     padding: 50px 15px;
-    text-align: center;
     border-radius: 5px;
+    text-align: center;
     width: 100%;
-    transform: translateZ(20px)
 }
-
-.service-section .service-item-inner:hover h3, p{
-    /* color: #e1e1ff; */
-    color: var(--text-black-600);
-    text-shadow: 1px var(--text-black-900);
-}
-
-.service-section .service-item-inner:hover .icon i{
-    color: var(--skin-color);
-}
-
-.service-section .service-item-inner:hover .icon{
-    box-shadow: var(--inner-shadow-0);
-}
-
-.service-section .service-item-inner:hover .icon:after{
-    box-shadow: var(--outer-shadow);
-}
-
-
 .service-section .service-item-inner .icon{
     height: 60px;
     width: 60px;
@@ -974,42 +1018,52 @@ img{
     display: block;
     margin: 0 auto 30px;
     position: relative;
-    color: var(--text-black-600);
 }
-
 .service-section .service-item-inner .icon::after{
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
-    top: 0;
+    top:0;
     width: 100%;
     height: 100%;
     border-radius: 50%;
     transition: all 0.3s ease;
 }
 
+.service-section .service-item-inner:hover .icon{
+    box-shadow: var(--inner-shadow-0);
+}
+.service-section .service-item-inner:hover .icon:after{
+    box-shadow: var(--outer-shadow);
+}
+.service-section .service-item:hover h3{
+    color: var(--skin-color);
+}
 .service-section .service-item-inner .icon i{
     font-size: 25px;
     line-height: 60px;
-    transition: all 0.3s ease;    
+    transition: all 0.3s ease;
 }
-
-
-.service-section .service-item-inner h3{
+.service-section .service-item-inner:hover .icon i,h3{
+    color: var(--skin-color);
+}
+.service-section .service-item-inner .h3{
     font-size: 20px;
     font-weight: 600;
+    color: var(--skin-color);
+    margin: 0 0 10px;
+    text-transform: capitalize;
+}
+ .service-item:hover .h3{
+    color: var(--skin-color);
+}
+.service-section .service-item-inner p{
+    font-size: 16px;
     color: var(--text-black-700);
+    margin: 0 ;
+    line-height: 26px;
 }
 
-.service-section .service-item-inner p{
-    font-size: 17px;
-    color: var(--text-black-600);
-    margin: 0;
-    line-height: 26px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-    
-}
 /***** End service-section *****/
 
 
@@ -1397,6 +1451,101 @@ body > div.pp.portfolio-popup.open > div.pp-details.active > div > div.pp-title 
 
 /***** End portfolio popup *****/
 
+/***** start certificate popup *****/
+
+#certificate{
+	width:100%;
+	height:100vh;
+	box-sizing: border-box;
+	font-family: calibri;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-top: 10px ;
+	
+}
+
+
+
+.s-box{
+	max-width:350px;
+	height: 400px;
+	margin: 20px;
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+}
+.b-container{
+	display: flex;
+	justify-content: center;
+	align-content: center;	
+}
+.s-b-img{
+	width: 100%;
+	height: 60%;
+    
+	
+}
+.s-b-img img{
+	width:90%;
+	height: 100%;
+    margin: 15px;
+    padding-bottom: 20px;
+
+	
+}
+.s-box h3{
+    color: var(--bg-black-900);
+
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.s-b-text{
+	width: 100%;
+	height: 40%;
+	background-color:transparent;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+    margin-bottom: 10px;
+}
+.s-b-text a{
+    margin-bottom: 10px;
+	font-size: 0.9rem;
+	font-family: calibri;
+	display: block;
+    display: -webkit-box;
+	max-width: 80%;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--bg-black-900);
+}
+.s-b-text .s-box:hover h3{
+	color:var(--skin-color)
+}
+.s-type{
+	font-family: calibri;
+	color:#FFFFFF;
+	background-color: var(--skin-color);
+	padding: 10px 15px;
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 18px;
+	border-radius: 0px 0px 10px 10px;
+	box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+}
+.s-box:hover{
+	transform:translateY(-10px);
+	transition: all ease 0.3s;
+	
+}
 /***** contact section *****/
 
 .contact-section{
